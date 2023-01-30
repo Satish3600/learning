@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>Task/30/01</title>
+
+</head>
+
+<body>
+    <div class="container p-5">
+        <h1 class="title is-2 has-text-centered">Dynamic Table</h1>
+        <input id="inputN" type="text" class="input is-large" placeholder="Enter the value"><br><br>
+        <div class="control has-text-centered">
+            <button onclick="drawTable()" class="button is-primary"> Draw Table</button>
+            <button onclick="addNewLine()" class="button is-info">Add More Lines</button>
+        </div>
+        <p id="drawtable1"></p>
+    </div>
+    <script>
+        function drawTable() {
+            let n = parseInt(document.getElementById("inputN").value);
+            console.log("1 n:->"+n);
+            let strDiv = '<table class="table is-bordered is-fullwidth"><tr><th>number</th></tr>';
+            console.log("2 n:->"+n + " strDiv:->"+strDiv);
+            for (i = 1; i <= n; i++) {
+                console.log("3 n:->"+n + " strDiv:->"+strDiv + "i:->"+i);
+                strDiv = strDiv + "<tr><td>" + i + "</td></tr>";
+                console.log("4 n:->"+n + " strDiv:->"+strDiv + "i:->"+i);
+            }
+            console.log(" 5n:->"+n + " strDiv:->"+strDiv + "i:->"+i);
+            strDiv = strDiv + "</table>";
+            console.log(" 6 n:->"+n + " strDiv:->"+strDiv + "i:->"+i);
+            console.log(strDiv);
+            console.log("7 n:->"+n + " strDiv:->"+strDiv + "i:->"+i);
+            document.getElementById("drawtable1").innerHTML= strDiv;
+            console.log("8 n:->"+n + " strDiv:->"+strDiv + "i:->"+i);
+        }
+        function addNewLine() {
+            let n = i;
+            console.log("1 n:->"+n);
+            let strDiv = '<table class="table is-bordered is-fullwidth"><tr><th>number</th></tr>';
+            console.log("2 n:->"+n + " strDiv:->"+strDiv);
+            for (i = 1; i <= n; i++) {
+                console.log("3 n:->"+n + " strDiv:->"+strDiv + "i:->"+i);
+                strDiv = strDiv + "<tr><td>" + i + "</td></tr>";
+                console.log("4 n:->"+n + " strDiv:->"+strDiv + "i:->"+i);
+            }
+            console.log(" 5n:->"+n + " strDiv:->"+strDiv + "i:->"+i);
+            strDiv = strDiv + "</table>";
+            console.log(" 6 n:->"+n + " strDiv:->"+strDiv + "i:->"+i);
+            console.log(strDiv);
+            console.log("7 n:->"+n + " strDiv:->"+strDiv + "i:->"+i);
+            document.getElementById("drawtable1").innerHTML= strDiv;
+            console.log("8 n:->"+n + " strDiv:->"+strDiv + "i:->"+i);
+        }
+    </script>   
+</body>
+
+</html>
