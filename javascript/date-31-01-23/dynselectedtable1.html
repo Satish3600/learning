@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>learning</title>
+</head>
+
+<body>
+    <div class="container p-5">
+        <h1 class="title is-2 has-text-centered">Dynamic Table</h1>
+        <input id="inputN" type="text" placeholder="Enter The Value">
+        <input id="inputM" type="text" placeholder="Put Value For  Select Line">
+        <div class="control has-text-centered">
+            <button onclick="drawTable()" class="button is-info">Draw Table</button>
+            <button onclick="addnewline()" class="button is-info">Add More Lines</button>
+            <button onclick="toggle()" class="button is-info">Toggle</button><br>
+        </div>
+        <p id="drawtablel"></p>
+        <p id="drawtablela"></p>
+    </div>
+
+    <script>
+        function drawTable() {
+            let n = parseInt(document.getElementById("inputN").value);
+            let nane = parseInt(document.getElementById("inputM").value);
+            let strDiv = '<table class="table is-bordered is-fullwidth"><tr><th>Number</th></tr>';
+            for (i = 1; i <= n; i++) {
+                strDiv = strDiv + "<tr><td>" + i + "</td></tr>";
+
+                // if(inputM.value == i){
+                //     strDiv = '<table class="table is-bordered is-fullwidth is-selected"><tr><th></th></tr>';
+                // }
+
+            }
+
+            document.getElementById("drawtablel").innerHTML = strDiv;
+        }
+        function addnewline() {
+            let n = i;
+            let strDiv = '<table class="table is-bordered is-fullwidth"><tr><th>Number</th></tr>';
+            for (i = 1; i <= n; i++) {
+                strDiv = strDiv + "<tr><td>" + i + "</td></tr>";
+            }
+            strDiv = strDiv + "</table>";
+            document.getElementById("drawtablel").innerHTML = strDiv;
+        }
+        function toggle() {
+
+            let name = document.getElementById("inputN").value;
+            console.log(name)
+            let bame = parseInt(document.getElementById("inputM").value);
+            console.log(bame)
+            if (name == 0 || name == "") {
+                alert("Please Enter The Value");
+            }
+
+            if (bame > name) {
+                alert("Toggle value is bigger than First Value");
+            }
+    
+            //             let came = 
+            // parseInt(document.getElementById("inputN").value);
+            // console.log(came)
+            // for (i = 1; i <= n; i++) {
+            //                 strDiv = strDiv + "<tr><td>" + i + "</td></tr>";
+           
+       
+            // if (name == 0 || name == "") 
+            // {
+            //     alert("Please Enter The Value");
+            // }
+
+            // if (bame > name) 
+            // {
+            //     alert("Toggle value is bigger than First Value");
+            // }
+            document.getElementById("drawtablel").innerHTML = top;
+
+        }
+    </script>
+</body>
+
+</html>

@@ -15,14 +15,16 @@
 
     <script>
         function aap (){
-            var a,b,temp;
-            a = Number(document.getElementById("first").value);
-            b = Number(document.getElementById("second").value);
-            temp =a;
-            a = b;
+          
+             const temp = Number(document.getElementById("first").value);
             
-            document.getElementById("first").value=a;
-            document.getElementById("second").value=b;
+            // temp =a;
+            // a = b;
+            // b = temp;
+            
+            document.getElementById("first").value=Number(document.getElementById("second").value);
+            document.getElementById("second").value=temp;
+            
         }
     </script>
 </body>

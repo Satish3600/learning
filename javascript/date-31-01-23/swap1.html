@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learning</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+</head>
+
+<body>
+    Value of A: <input id="first" type="text" class="input is-large" placeholder="Enter The Value"><br><br>
+    Value of B: <input id="second" type="text" class="input is-large" placeholder="Enter The Value"><br><br>
+    <button onclick="team()" class="button is-info">SwapProgram</button>
+
+    <!-- Now we write javascript -->
+
+    <script>
+        function team() {
+            let a,b,temp;
+            a = Number(document.getElementById("first").value);
+            b = Number(document.getElementById("second").value);
+            temp = a;
+            a = b;
+            b = temp;
+
+            document.getElementById("first").value=a;
+            document.getElementById("second").value=b;
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

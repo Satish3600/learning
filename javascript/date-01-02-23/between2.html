@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container p-5">
+        Enter First Value:
+        <input  id="first" type="text" class="input is-large"placeholder="Enter The Value"><br><br>
+      Enter Second value:  <input  id="second" type="text" class="input is-large"placeholder="Enter The Value"> <br><br>
+        <button onclick="fap()" class="button is-info">Click</button><br><br>
+        Total Ans:<input  id="third" type="text" class="input is-large"placeholder="Check total Answer"> <br><br>
+       Detail Ans: <input  id="fourth" type="text" class="input is-large"placeholder="Check Detail Answer"> 
+
+
+<script>
+    function fap(){
+        let a = parseInt(document.getElementById("first").value); 
+        let b = parseInt(document.getElementById("second").value);
+        let c = 0;
+        let str = "";
+        for(i=a; i<=b; i++){ 
+        c = c + i;
+        if(i!=b){
+            str = str + i + "+";
+        }
+        else{
+            str = str + i;
+        }
+       
+        // console.log(str)
+    }
+    document.getElementById("third").value=c;
+    document.getElementById("fourth").value=str;
+
+    }
+</script>
+
+
+
+
+
+
+
+    </div>
+    </body>
+</html>
